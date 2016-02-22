@@ -1,0 +1,232 @@
+% What kind of text document should we build
+\documentclass[a4,10pt]{article}
+
+
+% Include packages we need for different features (the less, the better)
+
+% Clever cross-referencing
+\usepackage{cleveref}
+
+% Math
+\usepackage{amsmath}
+
+% Algorithms
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{titlesec}
+\usepackage{lipsum}% just to generate text for the example
+\usepackage{listings} 
+\usepackage{url}
+
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
+% Tikz
+\RequirePackage{tikz}
+\usetikzlibrary{arrows,shapes,calc,through,intersections,decorations.markings,positioning}
+
+\tikzstyle{every picture}+=[remember picture]
+
+\RequirePackage{pgfplots}
+
+
+
+
+% Set TITLE, AUTHOR and DATE
+\title{Finite Element Method Solver Programming(STE 6219)}
+\author{Jiaxin Lin(140740)}
+\date{\today}
+ 
+
+
+\begin{document}
+
+
+
+  % Create the main title section
+  \maketitle
+
+  \begin{abstract}
+   This is the report about the FEM Solver Programming.
+   Using GMlib and class TriangleFasets(TriangleSystem) from UiT-Campus Narvik.The report about the finite element method theory,both of regular point set and a random generated point set,compute the matrix and demo of project.
+   
+  \end{abstract}
+
+
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%  The main content of the report  %%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+  \section{Introduction}
+\vspace{10pt}
+ \subsection*{GMlib Library}
+ \vspace{10pt}
+GMlib is free software for use with geometric modelling with parametric in C++.In the project,
+Visualization of the drum is using GMlib.The libary was make and update by UIT-Campus Narvik.
+
+   \subsubsection*{Class TriangleFasets}
+%\vspace{10pt}
+
+\begin{table}[H]
+\centering
+\caption{main class}
+\vspace{10pt}
+\label{main class}
+\begin{tabular}{lll}
+\cline{1-2}
+\multicolumn{1}{|l|}{TSTriangle} & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The triangle class defined by 3 edges,use getVertices to\\ get triangle each vertex and the return value's type is Array\end{tabular}}                                                  &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{TSVertex}   & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The vertex class storing 3D position and a normal,each nodes \\ in the drum combine different vertices of triangles.\end{tabular}}                                                      &  \\ \cline{1-2}
+\multicolumn{1}{|l|}{TSEdge}     & \multicolumn{1}{l|}{\begin{tabular}[c]{@{}l@{}}The edge class defined by 2 vertices.use getFirstVertex and \\ getLastVertex compare the vertex to get same edges of two triangles\\ and then define the other two nodes.\end{tabular}} &  \\ \cline{1-2}
+                                 &                                                                                                                                                                                                                                        
+\end{tabular}
+\end{table}
+
+In the TriangleSystem have lots of different functions to get something to use in project.
+In this report not decrible in detail.
+Detailed instructions can be see in the referrence.Just look the inheritance diagram follow the
+figure.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=1.00\textwidth]{gfx/TriangleFacets.png}
+
+      \caption{Inheritance diagram for TriangleFacets\cite{h}}
+      \label{fig:TriangleFacets}
+    \end{figure}
+
+  \section{Theoretical Description }
+
+    The finite element method (FEM) is a numerical technique for finding approximate solutions to boundary value problems for partial differential equations.
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.30\textwidth]{gfx/fi.png}
+      \includegraphics[width=0.30\textwidth]{gfx/base.png}
+
+      \caption{Finite triangulation of the body\cite{IEEEhowto:kopka}}
+      \label{fig:fi}
+    \end{figure}
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.70\textwidth]{gfx/commonarea.png}
+      \caption{The two Örst Ögures shows the support of the basis function corresponding
+to node 1 and node 2 respectively. The last figure shows the intersection
+between these supports\cite{IEEEhowto:kopka}}
+      \label{fig:fi}
+    \end{figure}
+Some formular use in the dimension 2.Observe that a ($v_{i}$
+, $v_{j}$ ) = 0 unless when Ni and Nj are nodes of the same triangle.
+
+    \begin{figure}[H]
+     % \centering
+      \includegraphics[width=0.80\textwidth]{gfx/form.png}
+      \label{fig:fi}
+    \end{figure}
+
+  \section{Random and Regular}
+\vspace{10pt}
+  \begin{itemize}
+    \item Generate random points in drum.
+Need two parameter,other can be define by the two paremeter.(radius and number of triangles)
+In order to avoid small triangles,have to check two inner points distance longer than s.
+($s=\sqrt{\frac{4\pi {r}^{2}}{\sqrt{3}t}}$,t=number of triangles)
+\vspace{10pt}
+
+    \item Generate regular points in drum.
+Need three parameter begin radius,number of rings,begin points.
+From the first ring to increase,add one more ring in that ring's points multiply 2.
+  \end{itemize}
+
+  
+
+  \section{Compute Matrix}\vspace{5pt}
+  \subsection*{Outside the diagonal}\vspace{5pt}
+First compute the stiff matrix.Find three vector to use in formular.So Need to return three values.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics[width=0.70\textwidth]{gfx/stiff.png}
+
+      \caption{Computing the stiffness matrix\cite{IEEEhowto:kopka}}
+      \label{fig:TriangleFacets}
+    \end{figure}
+
+
+
+    \begin{itemize}
+      \item Formula for three vector\\
+      $\overrightarrow{d}=p_{1}-p_{0}$\vspace{5pt}\\
+$\overrightarrow{{a}_{1}}=p_{2}-p_{0}$\vspace{5pt}\\
+$\overrightarrow{{a}_{2}}=p_{3}-p_{0}$\vspace{5pt}
+\item Computing Stiffness matrix elements outside the diagonal.Use the three vector to combine the below formula .
+\begin{lstlisting}[ language=C++] 
+  if(sameEdge!=nullptr){
+      auto getVector=findVector(sameEdge);
+      double dd=1/(getVector[0]*getVector[0]);
+      //first trangle
+      double area1=std::abs(getVector[0]^getVector[1]);
+      double dh1=dd*(getVector[1]*getVector[0]);
+      double h1=dd*area1*area1;
+      //sencond triangle
+      double area2=std::abs(getVector[2]^getVector[0]);
+      double dh2=dd*(getVector[2]*getVector[0]);
+      double h2=(dd*area2*area2);
+      //computing Amatrix[i][j]
+
+  _Amatrix[i][j]=_Amatrix[j][i]=(((dh1*(1-dh1)/h1)-dd)*
+((area1)/2)+((dh2*(1-dh2)/h2)-dd)*((area2)/2));
+
+                   }
+\end{lstlisting} 
+\end{itemize}
+\subsection*{Diagonal}
+
+ Computing stiffness matrix diagonal elements
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.70\textwidth]{gfx/di.png}
+
+      \caption{Computing the stiffness matrix diagonal elements\cite{IEEEhowto:kopka}}
+      \label{fig:TriangleFacets}
+    \end{figure}
+\begin{itemize}
+\item The values on the diagonal of the stiffness matrix is where the element is computed against itself.
+\\
+$\overrightarrow{d}_{1}=p_{2}-p_{0}$\vspace{5pt}\\
+$\overrightarrow{{d}_{2}}=p_{1}-p_{0}$\vspace{5pt}\\
+$\overrightarrow{{d}_{3}}=p_{2}-p_{1}$\vspace{5pt}\\
+ 
+\begin{lstlisting}[ language=C++] 
+ _Amatrix[i][i]+=((Dvector[2]*Dvector[2])/
+(2*std::abs(Dvector[0]^Dvector[1])));
+                   
+\end{lstlisting} 
+\end{itemize}
+\subsection*{Vector B}
+\begin{itemize}
+\item Computing Vector B
+\begin{lstlisting}[ language=C++] 
+auto Bvector=findVectorD(_nodes[i],t[j]);
+_b[i]+=((std::abs(Bvector[0]^Bvector[1]))/6);
+\end{lstlisting} 
+    \end{itemize}
+
+  \section{Conclusion}
+    In conclusion,this project is  based on the lectures in the course: partial differential equations and FEM.
+Througe this project understand the fem better.Practise better than theory.Moreover,with use the 
+GMlib libary and see the code form the teacher.Students will make progress in C++ and math.
+  
+% Include the bibliography
+\begin{thebibliography}{1}
+
+
+\bibitem{h}
+\url{http://episteme.hin.no/dox/GMlib2/classGMlib_1_1TriangleFacets.html}
+
+\bibitem{IEEEhowto:kopka}
+Dag~Lukkassen, \emph{A short introduction to Sobolev-spaces and applications for engineering students},\hskip 1em plus
+  0.5em minus 0.4em\relax November, 2004.
+\end{thebibliography}
+\end{document}

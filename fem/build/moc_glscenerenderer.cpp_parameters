@@ -1,0 +1,9 @@
+-IC:/programming/gmlib-build/include
+-IC:/programming/glew-build/release/include
+-DGM_GL_DEBUG
+-DGM_STREAM
+-DGLEW_STATIC
+-DWIN32
+-o
+C:/programming/fem/build/moc_glscenerenderer.cpp
+C:/programming/fem/glscenerenderer.h

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="fem-lin" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\Qt\;CMake Files\..\..\Qt\5.4\;CMake Files\..\..\Qt\5.4\mingw491_32\;CMake Files\..\..\Qt\5.4\mingw491_32\lib\;CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\;CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Core\;CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Quick\;CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\;CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Qml\;CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Network\;CMake Files\..\gmlib-build\;CMake Files\..\gmlib-build\lib\;CMake Files\..\gmlib-build\lib\cmake\;CMake Files\..\gmlib-build\lib\cmake\GMlib-0.5\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="C:/programming/fem/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="edit_cache">
+         <Option working_dir="C:/programming/fem/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 edit_cache" />
+            <CompileFile command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="C:/programming/fem/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="fem-lin">
+         <Option output="C:/programming/fem/build/bin/fem-lin.exe" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="C:/programming/fem/build/bin" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGM_GL_DEBUG" />
+            <Add option="-DGM_STREAM" />
+            <Add option="-DGLEW_STATIC" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_QUICK_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_QML_LIB" />
+            <Add option="-DQT_NETWORK_LIB" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtCore" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtGui" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtNetwork" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtQml" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtQuick" />
+            <Add directory="C:/Qt/5.4/mingw491_32/mkspecs/win32-g++" />
+            <Add directory="C:/Qt/Tools/mingw491_32/bin/../lib/gcc/i686-w64-mingw32/4.9.1/../../../../i686-w64-mingw32/include" />
+            <Add directory="C:/Qt/Tools/mingw491_32/bin/../lib/gcc/i686-w64-mingw32/4.9.1/include" />
+            <Add directory="C:/Qt/Tools/mingw491_32/bin/../lib/gcc/i686-w64-mingw32/4.9.1/include-fixed" />
+            <Add directory="C:/Qt/Tools/mingw491_32/lib/gcc/../../i686-w64-mingw32/include/c++" />
+            <Add directory="C:/Qt/Tools/mingw491_32/lib/gcc/../../i686-w64-mingw32/include/c++/backward" />
+            <Add directory="C:/Qt/Tools/mingw491_32/lib/gcc/../../i686-w64-mingw32/include/c++/i686-w64-mingw32" />
+            <Add directory="C:/programming/glew-build/release/include" />
+            <Add directory="C:/programming/gmlib-build/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 fem-lin" />
+            <CompileFile command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="fem-lin/fast">
+         <Option output="C:/programming/fem/build/bin/fem-lin.exe" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="C:/programming/fem/build/bin" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add option="-DGM_GL_DEBUG" />
+            <Add option="-DGM_STREAM" />
+            <Add option="-DGLEW_STATIC" />
+            <Add option="-DQT_CORE_LIB" />
+            <Add option="-DQT_NO_DEBUG" />
+            <Add option="-DQT_QUICK_LIB" />
+            <Add option="-DQT_GUI_LIB" />
+            <Add option="-DQT_QML_LIB" />
+            <Add option="-DQT_NETWORK_LIB" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtCore" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtGui" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtNetwork" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtQml" />
+            <Add directory="C:/Qt/5.4/mingw491_32/include/QtQuick" />
+            <Add directory="C:/Qt/5.4/mingw491_32/mkspecs/win32-g++" />
+            <Add directory="C:/Qt/Tools/mingw491_32/bin/../lib/gcc/i686-w64-mingw32/4.9.1/../../../../i686-w64-mingw32/include" />
+            <Add directory="C:/Qt/Tools/mingw491_32/bin/../lib/gcc/i686-w64-mingw32/4.9.1/include" />
+            <Add directory="C:/Qt/Tools/mingw491_32/bin/../lib/gcc/i686-w64-mingw32/4.9.1/include-fixed" />
+            <Add directory="C:/Qt/Tools/mingw491_32/lib/gcc/../../i686-w64-mingw32/include/c++" />
+            <Add directory="C:/Qt/Tools/mingw491_32/lib/gcc/../../i686-w64-mingw32/include/c++/backward" />
+            <Add directory="C:/Qt/Tools/mingw491_32/lib/gcc/../../i686-w64-mingw32/include/c++/i686-w64-mingw32" />
+            <Add directory="C:/programming/glew-build/release/include" />
+            <Add directory="C:/programming/gmlib-build/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 fem-lin/fast" />
+            <CompileFile command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="C:/Qt/Tools/mingw491_32/bin/mingw32-make.exe -f &quot;C:/programming/fem/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="C:/programming/fem/element.cpp">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/element.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/femobject.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/glcontextsurfacewrapper.cpp">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/glcontextsurfacewrapper.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/glscenerenderer.cpp">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/glscenerenderer.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/gmlibwrapper.cpp">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/gmlibwrapper.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/guiapplication.cpp">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/guiapplication.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/main.cpp">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/qml.qrc">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/testtorus.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/utils.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/window.cpp">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/window.h">
+         <Option target="fem-lin"/>
+      </Unit>
+      <Unit filename="C:/programming/fem/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/qml.qrc">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Core/Qt5CoreConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Core/Qt5CoreMacros.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Core\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Quick/Qt5QuickConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Quick\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Quick/Qt5QuickConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Quick\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QDDSPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QJp2Plugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QMngPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Gui\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Qml/Qt5QmlConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Qml\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Qml/Qt5QmlConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Qml\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Qml/Qt5Qml_QtQuick2Plugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Qml\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Network\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Network/Qt5NetworkConfig.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Network\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Network\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../../Qt/5.4/mingw491_32/lib/cmake/Qt5Network/Qt5Network_QNativeWifiEnginePlugin.cmake">
+          <Option virtualFolder="CMake Files\..\..\Qt\5.4\mingw491_32\lib\cmake\Qt5Network\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../gmlib-build/lib/cmake/GMlib-0.5/GMlibConfigVersion.cmake">
+          <Option virtualFolder="CMake Files\..\gmlib-build\lib\cmake\GMlib-0.5\" />
+      </Unit>
+      <Unit filename="C:/programming/fem/../gmlib-build/lib/cmake/GMlib-0.5/GMlibConfig.cmake">
+          <Option virtualFolder="CMake Files\..\gmlib-build\lib\cmake\GMlib-0.5\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
