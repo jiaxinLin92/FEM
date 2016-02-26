@@ -317,7 +317,7 @@ void regularTriangulate(double beginradius,int cir,int beginpoints){
 
 protected:
 
-//-----creat force for drum
+//------creat force for drum
 
    void localSimulate(double dt)
    {
